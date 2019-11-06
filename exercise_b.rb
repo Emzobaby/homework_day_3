@@ -66,11 +66,13 @@ p users["Avril"][:pets][0][:species]
 users["Erik"][:lottery_numbers].sort!
 p users["Erik"][:lottery_numbers][0]
 # Return an array of Avril's lottery numbers that are even
+new_array = []
 for number in users["Avril"][:lottery_numbers]
   if number.even?
-    p number
+    new_array << number
   end
 end
+  p new_array
 # Add 7 to Erik's lottery numbers
 users["Erik"][:lottery_numbers] << 7
 p users["Erik"][:lottery_numbers]
